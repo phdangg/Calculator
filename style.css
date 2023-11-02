@@ -1,0 +1,78 @@
+@font-face {  
+    font-family: "Eurostile";  
+    src: url(fonts/eurostile.TTF); /* IE */  
+    src: local("Eurostile"), url(fonts/eurostile.TTF) format("opentype"); /* non-IE */  
+} 
+@font-face {  
+    font-family: "HostilGradient";  
+    src: url(fonts/HostilGradient.ttf); /* IE */  
+    src: local("Eurostile"), url(fonts/HostilGradient.ttf) format("opentype"); /* non-IE */  
+} 
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.main-calculator,
+.main-container,
+.header{
+    width: 450px;
+}
+.main-calculator{
+    border: 1px solid black;
+    border-radius: 5rem;
+    height: 800px;
+    
+}
+.main-calculator{
+    display: flex;    
+    
+}
+.main-container{
+    display: flex;
+    flex-direction: column;   
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5rem;
+    height: 780px;
+    background-color: #3F3F3F;
+}
+.header{
+    display: flex;
+    gap: 4rem;
+    justify-content: space-around;
+    align-items: center;
+}
+#casio,#model{
+    font-family: 'Eurostile';
+    color: white;
+}
+#casio{
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+#title{
+    font-family: 'HostilGradient';
+    color: rgb(185, 74, 102);
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 0;
+}
+.container-body{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.cal-screen{
+    display: flex;
+    flex-basis: 40%;
+    border-radius: 1rem;    
+    background-color: #D7E3DC;
+}
+.button-container{
+    display: flex;
+    height: 600px;    
+}
