@@ -13,6 +13,11 @@
     src: url(fonts/SFFourche.ttf); /* IE */  
     src: local("Eurostile"), url(fonts/SFFourche.ttf) format("opentype"); /* non-IE */  
 } 
+@font-face {  
+    font-family: "LSDPRI-N";  
+    src: url(fonts/LSDPRI-N.ttf); /* IE */  
+    src: local("Eurostile"), url(fonts/LSDPRI-N.ttf) format("opentype"); /* non-IE */  
+} 
 body{
     display: flex;
     justify-content: center;
@@ -69,20 +74,40 @@ body{
     display: flex;
     flex-direction: column;
     width: 400px;
+    height: 650px;
     gap: 1rem;
 }
 .cal-screen{
-    display: flex;
-    flex-basis: 40%;
+    display: flex;    
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 200px;
+
     border-radius: 1rem;    
     background-color: #D7E3DC;
+    font-family: 'LSDPRI-N';
+    font-weight: bold;
+    font-size: 30px;
+
+}
+.top-screen{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+.bottom-screen{
+    align-self: flex-end;
+    margin-right: 10px;
+
 }
 .button-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 550px;
     gap: 4px;
 }
 .squareButton{
@@ -96,8 +121,12 @@ body{
     border-top-left-radius: 20px;
     -webkit-clip-path: polygon(90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 0);
     clip-path: polygon(90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 0);
-    
+    cursor: pointer;
+
     font-family: 'SFFourche';
     font-weight: bold;
     font-size: 30px;
+}
+.squareButton:hover{
+    cursor: pointer;
 }
