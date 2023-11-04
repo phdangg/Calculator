@@ -15,7 +15,7 @@ This project is a web-based simulation of the Casio 580 Classic Calculator, impl
 
 ## How to Use
 
-1. Clone the repository to your local machine using `git clone https://github.com/your-username/casio-580-calculator.git`.
+1. Clone the repository to your local machine using `git clone https://github.com/phdangg/Calculator.git`.
 2. Open the `index.html` file in your web browser.
 3. Use the calculator interface to perform calculations.
 
