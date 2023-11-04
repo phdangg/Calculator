@@ -91,6 +91,10 @@ body{
     font-size: 30px;
 
 }
+.top-screen,
+.bottom-screen{
+    height: 50px;
+}
 .top-screen{
     display: flex;
     flex-wrap: wrap;

@@ -1,4 +1,5 @@
 
+
 const buttonContainer = document.querySelector('.button-container');
 
 const buttonList = [
@@ -29,18 +30,36 @@ const topScreen = document.querySelector('.top-screen');
 const bottomScreen = document.querySelector('.bottom-screen');
 let topScreenString = "";
 let bottomScreenString = "";
+let previousResult = "0"
 
-
+function convertToValidExpression(topScreenString){
+    let result = topScreenString;
+    result = topScreenString.replace('X','*');
+    result = result.replace('Ans',previousResult);
+    previousResult = result;
+    return result;
+}
 function printResult(topScreenString){
-
+    const expression = convertToValidExpression(topScreenString);
+    try {
+        const result = math.evaluate(expression);
+        bottomScreen.textContent = result;
+    } catch(error){
+        topScreen.textContent = error.message;
+    }
+}
+function clearScreen(){
+    topScreen.textContent = "";
+    bottomScreen.textContent = "";
+    bottomScreenString = "";
+    topScreenString = "";
 }
 
 allSquareButton.forEach(squareButton => {
     squareButton.addEventListener('click',()=>{
         switch(squareButton.textContent){
             case 'AC':
-                topScreen.textContent = "";
-                topScreenString = "";
+                clearScreen()
                 return;
             case 'DEL':
                 topScreenString = topScreen.textContent;
@@ -50,11 +69,13 @@ allSquareButton.forEach(squareButton => {
             case '=':
                 printResult(topScreenString);
                 return;
-            case 'x10':
-            case 'Ans':
+            case 'x10': // not available           
             default:
                 break;
         };
+        if (bottomScreen.textContent) /*is not a empty string*/{
+            clearScreen();
+        }
         topScreenString += squareButton.textContent;
         topScreen.textContent = topScreenString;
     });
