@@ -4,7 +4,7 @@ const buttonContainer = document.querySelector('.button-container');
 
 const buttonList = [
     [7,8,9,'DEL','AC'],
-    [4,5,6,'X','÷'],
+    [4,5,6,'×','÷'],
     [1,2,3,'+','-'],
     [0,'.','x10','Ans','=']
 ];
@@ -34,7 +34,7 @@ let previousResult = "0"
 
 function convertToValidExpression(topScreenString){
     let result = topScreenString;
-    result = topScreenString.replace('X','*');
+    result = topScreenString.replace('×','*');
     result = result.replace('Ans',previousResult);
     result = result.replace('÷','/');
     previousResult = result;
